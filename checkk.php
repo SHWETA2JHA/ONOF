@@ -2,7 +2,7 @@
 session_start();
 echo '<pre>';
 $con = mysqli_connect('localhost', 'root', '','onof');
-
+//connection established
 $password = $_POST['password'];
 $email = $_POST['email'];
 
@@ -14,7 +14,6 @@ $sql= "SELECT email,password FROM `userinfo` WHERE email='$email' AND password='
         $_SESSION['username']='. Incorrect info. Please login again.';
     
     }
-
 
 header("Location: formvalidation.php");
 
